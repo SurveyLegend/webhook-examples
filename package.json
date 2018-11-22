@@ -1,0 +1,32 @@
+{
+  "name": "surveylegend-webhook-examples",
+  "version": "0.1.0",
+  "author": "SurveyLegend AB",
+  "contributors": [
+    "Robert Michalski"
+  ],
+  "keywords": [
+    "api",
+    "webhooks",
+    "surveylegend"
+  ],
+  "scripts": {
+    "start": "NODE_ENV=development nodemon node/hapi/server -x \"node -r dotenv/config -r make-promises-safe\"",
+    "start:production": "NODE_ENV=production nodemon server -x \"node -r dotenv/config -r make-promises-safe\""
+  },
+  "dependencies": {
+    "hapi": "^17.7.0",
+    "qs": "^6.5.2",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "dotenv": "^6.1.0",
+    "eslint": "^5.9.0",
+    "make-promises-safe": "^4.0.0",
+    "nodemon": "^1.18.5"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "license": "MIT"
+}

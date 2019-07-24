@@ -2,10 +2,15 @@ const webhookRoute = require('./webhookRoute')
 // Documentation, enable to explore and experiment with plugin
 const Server = require('@hapi/hapi').Server
 
+const PORT = Number.parseInt(process.env.PORT) || 3000
+const IP = process.env.IP || '127.0.0.1'
+const HOST = process.env.HOSTNAME || 'localhost'
+const WEBHOOK_URL = process.env.WEBHOOK_URL || '/'
+
 const server = new Server({
-    host: process.env.HOSTNAME || 'localhost',
-    address: process.env.IP || '127.0.0.1',
-    port: Number.parseInt(process.env.PORT) || 3000,
+    host: HOST,
+    address: IP,
+    port: PORT,
     routes: {
         cors: true
     },
@@ -15,7 +20,7 @@ const server = new Server({
     }
 })
 
-const routeDef = webhookRoute(process.env.HANDSHAKE_KEY)
+const routeDef = webhookRoute(WEBHOOK_URL, process.env.HANDSHAKE_KEY)
 
 server.route(routeDef)
 

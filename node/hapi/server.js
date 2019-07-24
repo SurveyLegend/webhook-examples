@@ -1,6 +1,6 @@
 const webhookRoute = require('./webhookRoute')
 // Documentation, enable to explore and experiment with plugin
-const Server = require('hapi').Server
+const Server = require('@hapi/hapi').Server
 
 const server = new Server({
     host: process.env.HOSTNAME || 'localhost',

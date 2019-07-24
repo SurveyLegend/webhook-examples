@@ -15,15 +15,15 @@
     "start:production": "NODE_ENV=production nodemon server -x \"node -r dotenv/config -r make-promises-safe\""
   },
   "dependencies": {
-    "hapi": "^17.7.0",
-    "qs": "^6.5.2",
+    "@hapi/hapi": "^17.9.0",
+    "qs": "^6.7.0",
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
-    "dotenv": "^6.1.0",
-    "eslint": "^5.9.0",
-    "make-promises-safe": "^4.0.0",
-    "nodemon": "^1.18.5"
+    "dotenv": "^8.0.0",
+    "eslint": "^6.1.0",
+    "make-promises-safe": "^5.0.0",
+    "nodemon": "^1.19.1"
   },
   "engines": {
     "node": ">=10"

@@ -1,4 +1,3 @@
-const http = require('http')
 const express = require('express')
 
 const app = express()
@@ -7,6 +6,8 @@ const processWebhook = require('../utils/processWebhook')
 
 const PORT = Number.parseInt(process.env.PORT) || 3000
 const WEBHOOK_URL = process.env.WEBHOOK_URL || '/' // Enter this into webhook url in SurveyLegend app
+
+app.use(express.json())
 
 if (process.env.NODE_ENV !== 'production') {
     const cors = require('cors')

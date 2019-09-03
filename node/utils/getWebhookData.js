@@ -14,7 +14,11 @@ module.exports = async function (payload, headers, handshake_key) {
             decoded_payload = parseUrlEncoded(payload)
             break
         case 'application/json':
-            decoded_payload = JSON.parse(payload)
+            if(payload && typeof payload === 'object') {
+                decoded_payload = payload
+            } else {
+                decoded_payload = JSON.parse(payload)
+            }
             break;
         default:
             decoded_payload = payload

@@ -13,7 +13,8 @@
   "scripts": {
     "http": "nodemon node/http/server -x \"node -r dotenv/config -r make-promises-safe\"",
     "express": "nodemon node/express/server -x \"node -r dotenv/config -r make-promises-safe\"",
-    "hapi": "nodemon node/hapi/server -x \"node -r dotenv/config -r make-promises-safe\""
+    "hapi": "nodemon node/hapi/server -x \"node -r dotenv/config -r make-promises-safe\"",
+    "test": "nodemon node/test_webhook -x \"node -r dotenv/config -r make-promises-safe\""
   },
   "dependencies": {
     "@hapi/hapi": "^17.9.0",

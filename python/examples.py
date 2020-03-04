@@ -1,17 +1,17 @@
 try:
-    from urllib.request import urlopen, Request
+    from urllib.request import urlopen, Request # Python 3
 except ImportError:
-    from urllib2 import urlopen, Request
+    from urllib2 import urlopen, Request # Python 2
 
 try:
-    from urllib.parse import urlencode
+    from urllib.parse import urlencode # Python 3
 except ImportError:
-    from urllib import urlencode
+    from urllib import urlencode # Python 2
 
 try:
-    from urllib.error import HTTPError, URLError
+    from urllib.error import HTTPError, URLError # Python 3
 except ImportError:
-    from urllib2 import HTTPError, URLError
+    from urllib2 import HTTPError, URLError # Python 2
 
 
 
@@ -30,9 +30,9 @@ def apiRequest (path, apikey = None, query = None, data = None, method = 'GET'):
     if query is not None: full_url += '?' + urlencode(query)
 
     try:
-        req = Request(url=full_url, data=data, headers=HEADERS, method=method)
+        req = Request(url=full_url, data=data, headers=HEADERS, method=method) # Python 3
     except TypeError as e:
-        req = Request(url=full_url, data=data, headers=HEADERS)  # Python2 does not allow method
+        req = Request(url=full_url, data=data, headers=HEADERS)  # Python 2 does not allow method
 
     try:
         res = urlopen(req)

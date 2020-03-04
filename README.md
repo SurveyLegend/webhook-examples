@@ -55,3 +55,19 @@ To use a PHP script for receiving a web-server such as Nginx, Apache or similar 
 The server must also be configured to respond to requests coming from the Internet and to run PHP scripts.
 
 TODO: Create script for handling incoming webhook call.
+
+## Python
+
+### API Usage Examples
+
+These examples are meant to be run from the command-line like so and usually require an API-key.
+```python python/examples.py --apikey=XXXXXXX-XXXXXXX-XXXXXXX-XXXXXXX --limit=3```
+
+Include get survey list for user, iterating and getting surveys
+
+### Webhook Examples
+
+To use a Python script for receiving a web-server such as Nginx, Apache or similar is necessary, a Python based server can also be used. 
+The server must also be configured to respond to requests coming from the Internet and to run Python scripts.
+
+TODO: Create script for handling incoming webhook call.

@@ -17,7 +17,7 @@
     "test": "nodemon node/test_webhook -x \"node -r dotenv/config -r make-promises-safe\""
   },
   "dependencies": {
-    "@hapi/hapi": "^17.9.0",
+    "@hapi/hapi": "^20.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "qs": "^6.8.0",
